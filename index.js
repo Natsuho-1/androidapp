@@ -10,6 +10,28 @@ import {
   Image,
 } from 'react-native';
 
+class HomeActivity extends Component {
+  // Adding header title, color and font weight
+  static navigationOptions = {
+    title: 'Espacio',
+    headerStyle: {
+      backgroundColor: '#03A9F4',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+  };
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.headerText}>Home Screen</Text>
+      </View>
+    );
+  }
+}
+
 const DATA = [
   {
     id: '1',
@@ -69,21 +91,23 @@ const styles = StyleSheet.create({
     marginTop: StatusBar.currentHeight || 0,
   },
   item: {
-    backgroundColor: '#f9c2ff',
-    padding: 20,
+    backgroundColor: '#FFFFFF',
+    padding: 10,
     marginVertical: 8,
     marginHorizontal: 16,
     alignItems: 'center',
+    borderColor: '#000000',
   },
   title: {
     fontSize: 32,
   },
   img: {
-    width: 200,
+    width: 100,
     Height: 125,
     borderwidth: 2,
     resizeMode: 'contain',
     margin: 8,
+    borderRadius: 150,
   },
 });
 AppRegistry.registerComponent('cars', () => App);
